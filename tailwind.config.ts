@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,15 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				// Custom colors
+				barber: {
+					orange: '#FF8C00',
+					darkOrange: '#E07B00',
+					wood: '#3B2506',
+					darkWood: '#1E1207',
+					black: '#0A0A0A',
+					gray: '#999999',
 				}
 			},
 			borderRadius: {
@@ -84,11 +84,28 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0'
+					},
+					'100%': {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 1s ease-out'
+			},
+			backgroundImage: {
+				'wood-pattern': "url('/images/wood-background.png')",
+				'dark-gradient': "linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9))",
+			},
+			fontFamily: {
+				heading: ["'Bebas Neue'", 'sans-serif'],
+				body: ["'Cairo'", 'sans-serif'],
 			}
 		}
 	},
